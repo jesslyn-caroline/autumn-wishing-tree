@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Darumadrop+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Averia+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Darumadrop+One&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-darumadrop-one: 'Darumadrop One', cursive;
+  --font-averia-libre: 'Averia Libre', cursive;
+
+  --color-brown-1: #78563D;
+  --color-brown-2: #9F7B61;
+  --color-tan-1: #EBD6B3;
+  --color-tan-2: #F5F0DE;
+  --color-cream: #FFFBEA;
+}
+
+.card-title {
+  font-size: 2cqi; 
+}
+
+body {
+  @apply flex justify-center overflow-hidden;
+}
+
+main {
+  @apply overflow-hidden w-screen h-screen bg-[url('./BG.svg')] bg-cover bg-no-repeat;
+  @apply grid grid-cols-2;
+}
+
+.sliding-window-left {
+  @apply w-full h-full bg-[url('./Inner-Bevel-Shadows-Left.svg')] bg-cover bg-right bg-no-repeat z-10;
+}
+
+.sliding-window-right {
+  @apply w-full h-full bg-[url('./Inner-Bevel-Shadows-Right.svg')] bg-cover bg-left bg-no-repeat z-10;
+}
+
+img {
+  -webkit-user-drag: none; 
+  user-select: none;     
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
