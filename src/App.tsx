@@ -56,13 +56,13 @@ function App() {
         <motion.div 
           initial={{ x: '-100%' }}
           animate={{ x: '0' }}
-          transition={{ delay: 2, duration: 1 }}
+          transition={{ delay: 2, duration: 2 }}
           className={`bg-[url('/Inner-Bevel-Shadows-Left.svg')] bg-cover bg-right z-10`} 
         />
         <motion.div 
           initial={{ x: '100%' }}
           animate={{ x: '0' }}
-          transition={{ delay: 2, duration: 1 }}
+          transition={{ delay: 2, duration: 2 }}
           className={`bg-[url('/Inner-Bevel-Shadows-Right.svg')] bg-cover bg-left z-1`} 
         />
       </div>
@@ -71,7 +71,7 @@ function App() {
       <motion.div
         initial={{ x: '-100%' }}
         animate={{ x: '0' }}
-        transition={{ delay: 2, duration: 1 }}
+        transition={{ delay: 2, duration: 2 }}
         className={`w-full h-full left-0 bottom-0 absolute z-10`}
       >
         <Tree openWishCard={openWishCard} />
