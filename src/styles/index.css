@@ -18,21 +18,12 @@
 }
 
 html, body, #root {
-  @apply w-screen h-screen bg-red-400 overflow-clip;
+  @apply w-full h-full m-0 p-0 overflow-hidden;
 }
 
-main {
-  /* @apply w-screen h-screen bg-[url('/BG.svg')] bg-cover bg-no-repeat; */
-  /* @apply grid grid-cols-2; */
+body {
+  @apply flex;
 }
-/* 
-.sliding-window-left {
-  @apply w-full h-full bg-[url('/Inner-Bevel-Shadows-Left.svg')] bg-cover bg-right bg-no-repeat z-10;
-}
-
-.sliding-window-right {
-  @apply w-full h-full bg-[url('/Inner-Bevel-Shadows-Right.svg')] bg-cover bg-left bg-no-repeat z-10;
-} */
 
 img {
   -webkit-user-drag: none; 
