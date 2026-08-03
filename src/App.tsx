@@ -1,47 +1,47 @@
-import { motion, useAnimate } from "framer-motion"
-import Tree from "./assets/Tree"
+// import { motion, useAnimate } from "framer-motion"
+// import Tree from "./assets/Tree"
 import Card from "./components/Card"
-import Overlay from "./components/Overlay"
-import WishCard from "./components/WishCard"
-import { useState } from "react"
+// import Overlay from "./components/Overlay"
+// import WishCard from "./components/WishCard"
+// import { useState } from "react"
 
 function App() {
-  const [scopeOpenWishCard, animateOpenWishCard] = useAnimate()
-  const [scopeAddWishCard, animateAddWishCard] = useAnimate()
+  // const [scopeOpenWishCard, animateOpenWishCard] = useAnimate()
+  // const [scopeAddWishCard, animateAddWishCard] = useAnimate()
 
-  const [selectedFlower, setSelectedFlower] = useState<string>('')
+  // const [selectedFlower, setSelectedFlower] = useState<string>('')
 
-  const openWishCard = (flower: string) => {
-    animateOpenWishCard(scopeOpenWishCard.current, { opacity: 1 }, { duration: 0.5 })
-    setSelectedFlower(flower)
-  }
+  // const openWishCard = (flower: string) => {
+  //   animateOpenWishCard(scopeOpenWishCard.current, { opacity: 1 }, { duration: 0.5 })
+  //   setSelectedFlower(flower)
+  // }
 
-  const closeWishCard = async () => {
-    await animateOpenWishCard(scopeOpenWishCard.current, { opacity: 0 }, { duration: 0.5 })
-    setSelectedFlower('')
-  }
+  // const closeWishCard = async () => {
+  //   await animateOpenWishCard(scopeOpenWishCard.current, { opacity: 0 }, { duration: 0.5 })
+  //   setSelectedFlower('')
+  // }
 
-  const addWish = async () => {
-    const flowerElement = document.getElementById(selectedFlower)
-    const flowerRect = flowerElement!.getBoundingClientRect()
+  // const addWish = async () => {
+  //   const flowerElement = document.getElementById(selectedFlower)
+  //   const flowerRect = flowerElement!.getBoundingClientRect()
 
-    const flowerCenterX = flowerRect.left + flowerRect.width / 2
-    const flowerCenterY = flowerRect.top + flowerRect.height / 2
+  //   const flowerCenterX = flowerRect.left + flowerRect.width / 2
+  //   const flowerCenterY = flowerRect.top + flowerRect.height / 2
 
-    const wishCardElement = document.getElementById('wish-card')
-    const wishCardRect = wishCardElement!.getBoundingClientRect()
+  //   const wishCardElement = document.getElementById('wish-card')
+  //   const wishCardRect = wishCardElement!.getBoundingClientRect()
 
-    const wishCardCenterX = wishCardRect.left + wishCardRect.width / 2
-    const wishCardCenterY = wishCardRect.top + wishCardRect.height / 2
+  //   const wishCardCenterX = wishCardRect.left + wishCardRect.width / 2
+  //   const wishCardCenterY = wishCardRect.top + wishCardRect.height / 2
 
-    const x = wishCardCenterX - flowerCenterX
-    const y = wishCardCenterY - flowerCenterY
+  //   const x = wishCardCenterX - flowerCenterX
+  //   const y = wishCardCenterY - flowerCenterY
 
-    await animateAddWishCard(scopeAddWishCard.current, { top: -y, left: -x, scale: 0 }, { duration: 0.5 })
-    animateAddWishCard(scopeAddWishCard.current, { top: 0, left: 0, scale: 1 }, { duration: 0.5 })
+  //   await animateAddWishCard(scopeAddWishCard.current, { top: -y, left: -x, scale: 0 }, { duration: 0.5 })
+  //   animateAddWishCard(scopeAddWishCard.current, { top: 0, left: 0, scale: 1 }, { duration: 0.5 })
     
-    closeWishCard()
-  }
+  //   closeWishCard()
+  // }
  
   return (
   <main className={`min-w-full min-h-full overflow-clip bg-amber-100`}>
