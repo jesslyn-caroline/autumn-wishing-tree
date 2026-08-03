@@ -44,7 +44,7 @@ function App() {
   }
  
   return (
-  <main>
+  <main className={`min-w-full min-h-full overflow-clip bg-amber-100`}>
     <div className={`absolute w-full h-full`}>
       {/* Card for Background */}
       <div className={`w-full absolute top-45/100 left-70/100 origin-bottom-left rotate-5`}>
@@ -52,7 +52,7 @@ function App() {
       </div>
 
       {/* Sliding Window */}
-      <div className={`w-full h-full grid grid-cols-2`}>
+      {/* <div className={`w-full h-full grid grid-cols-2`}>
         <motion.div 
           initial={{ x: '-100%' }}
           animate={{ x: '0' }}
@@ -65,25 +65,25 @@ function App() {
           transition={{ delay: 2, duration: 1 }}
           className={`sliding-window-right`} 
         />
-      </div>
+      </div> */}
 
       {/* Tree */}
-      <motion.div
+      {/* <motion.div
         initial={{ x: '-100%' }}
         animate={{ x: '0' }}
         transition={{ delay: 2, duration: 1 }}
         className={`w-full h-full left-0 bottom-0 absolute z-10`}
       >
         <Tree openWishCard={openWishCard} />
-      </motion.div>
+      </motion.div> */}
 
       {/* Wish Card */}
-      <motion.div initial={{ opacity: 0 }} ref={scopeOpenWishCard} className={`w-full h-full`}>
+      {/* <motion.div initial={{ opacity: 0 }} ref={scopeOpenWishCard} className={`w-full h-full`}>
         <Overlay />
         <div className={`w-full absolute z-30 top-1/2 left-1/2`}>
           <WishCard scope={scopeAddWishCard} onClose={closeWishCard} addWish={addWish} />
         </div>
-      </motion.div>
+      </motion.div> */}
     </div>
   </main>
 )}

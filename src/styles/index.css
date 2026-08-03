@@ -17,22 +17,22 @@
   font-size: 2cqi; 
 }
 
-body {
-  @apply flex justify-center overflow-hidden;
+html, body, #root {
+  @apply w-screen h-screen bg-red-400 overflow-clip;
 }
 
 main {
-  @apply overflow-hidden max-w-screen max-h-screen w-screen h-screen bg-[url('/BG.svg')] bg-cover bg-no-repeat;
-  @apply grid grid-cols-2;
+  /* @apply w-screen h-screen bg-[url('/BG.svg')] bg-cover bg-no-repeat; */
+  /* @apply grid grid-cols-2; */
 }
-
+/* 
 .sliding-window-left {
   @apply w-full h-full bg-[url('/Inner-Bevel-Shadows-Left.svg')] bg-cover bg-right bg-no-repeat z-10;
 }
 
 .sliding-window-right {
   @apply w-full h-full bg-[url('/Inner-Bevel-Shadows-Right.svg')] bg-cover bg-left bg-no-repeat z-10;
-}
+} */
 
 img {
   -webkit-user-drag: none; 
